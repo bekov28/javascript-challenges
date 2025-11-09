@@ -18,3 +18,4 @@ A simple and beautiful weather application that shows current weather conditions
 🎨 Beautiful UI - Clean and modern interface
 
 ⚡ Fast Loading - Quick weather data retrieval (used An API key from OpenWeatherMap)
+
