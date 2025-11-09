@@ -4,7 +4,11 @@ const searchBtn = document.querySelector(".search button");
 const weather = document.querySelector(".weather-icon");
 const errorSpan = document.querySelector(".error");
 
+const API_KEY = CONFIG.API_KEY;
+const API_URL = CONFIG.API_URL;
+
 //request weather data function
+
 async function requestWeatherData(city) {
   const response = await fetch(API_URL + `q=${city}` + "&units=metric" + `&appid=${API_KEY}`);
 
