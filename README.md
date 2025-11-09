@@ -19,5 +19,5 @@ A simple and beautiful weather application that shows current weather conditions
 
 ⚡ Fast Loading - Quick weather data retrieval (used An API key from OpenWeatherMap)
 
-1-project. To-Do List
+2-project. To-Do List
 Features:
