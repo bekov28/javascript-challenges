@@ -15,4 +15,9 @@ function addTask() {
   inputBox.value = "";
 }
 
+//1. When we click on the li element, it should cross-check the element
+//2. When we click on the x element, it should entirely delete the li element
+
+//1-solution
+
 
