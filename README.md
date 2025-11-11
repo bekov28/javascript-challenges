@@ -21,3 +21,6 @@ A simple and beautiful weather application that shows current weather conditions
 
 2-project. To-Do List
 Features:
+- adding new tasks with onclick on html;
+- deleting the tasks and toggling
+- storing the task data in localStorage and retrieving the data (setItem() and getItem())

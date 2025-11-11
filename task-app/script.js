@@ -13,11 +13,27 @@ function addTask() {
     li.appendChild(span);
   }
   inputBox.value = "";
+  storeTask();
 }
 
-//1. When we click on the li element, it should cross-check the element
-//2. When we click on the x element, it should entirely delete the li element
+//Deleting the task
 
-//1-solution
+listContainer.addEventListener("click", (event) => {
+  if (event.target.tagName === "LI") {
+    event.target.classList.toggle("checked"); //toggle the class
+    storeTask();
+  } else if (event.target.tagName === "SPAN") {
+    event.target.parentElement.remove(); //remove li element
+    storeTask();
+  }
+});
 
-
+//store the task data
+function storeTask() {
+  localStorage.setItem("data", listContainer.innerHTML);
+}
+//get the task data
+function getTask() {
+  listContainer.innerHTML = localStorage.getItem("data");
+}
+getTask();
