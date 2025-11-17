@@ -14,22 +14,27 @@
       </h1>
       <div class="display">
         <input type="text" id="password" placeholder="Password" />
-        <img src="images /copy.png" onclick="copyPassword()" />
+        <img src="images /copy.png" />
       </div>
       <button><img src="images /generate.png" />Generate Password</button>
     </div>
 
     <script>
+      //variables
       const passwordBox = document.getElementById("password");
       const buttonBox = document.querySelector("button");
-      const length = 12;
-      const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-      const lowerCase = "abcdefgijklmnopqrstuvwxyz";
-      const number = "0123456789";
-      const symbol = "@#$%^&*()_+~|}{[]></-=";
-      const allChars = upperCase + lowerCase + number + symbol;
+      const imageCopy = document.querySelector("img");
 
-      function createPassword() {
+      const length = 12;
+      const upperCase = "ABCDEFGIJKLMNOPQRSTUVWXYZ";
+      const lowerCase = "abcdefgijklmnopqrstuwxyz";
+      const number = "0123456789";
+      const symbol = "!@#$%^&*(){}_+><?|;~";
+
+      const totalCase = upperCase + lowerCase + number + symbol;
+
+      //show password logic
+      function showPassword() {
         let password = "";
         password += upperCase[Math.floor(Math.random() * upperCase.length)];
         password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
@@ -37,17 +42,20 @@
         password += symbol[Math.floor(Math.random() * symbol.length)];
 
         while (length > password.length) {
-          password += allChars[Math.floor(Math.random() * upperCase.length)];
+          //add characters until the password length is 12
+          password += totalCase[Math.floor(Math.random() * totalCase.length)];
         }
         passwordBox.value = password;
       }
 
-      buttonBox.addEventListener("click", createPassword);
+      buttonBox.addEventListener("click", showPassword);
 
-      function copyPassword() {
+      //clipboard logic
+      function clipBoard() {
         passwordBox.select();
         document.execCommand("copy");
       }
+      imageCopy.addEventListener("click", clipBoard);
     </script>
   </body>
 </html>
