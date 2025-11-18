@@ -31,3 +31,8 @@ Features:
 
 - Random password generator with HTML, CSS and JS
 - strong password with Uppercase, lowercase, numbers and symbols
+
+5-project. Notes App
+- working with localStorage (setItem, getItem);
+- eventListeners, such as click, onkeyup, keydown
+- using execCommand
