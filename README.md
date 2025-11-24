@@ -38,3 +38,4 @@ Features:
 6-project. Age Calculator
 Features:
 -new Date().toISOString();
+-new Date().getDate(), getMonth(), getFullYear()

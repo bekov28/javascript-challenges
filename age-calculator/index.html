@@ -17,25 +17,59 @@
           <input type="date" id="date" />
           <button onclick="calculateAge()">Calculate</button>
         </div>
+        <p id="result"></p>
       </div>
     </div>
 
     <script>
       let inputBox = document.getElementById("date");
       inputBox.max = new Date().toISOString().split("T")[0];
-      console.log(inputBox.max);
+      let result = document.getElementById("result");
 
       function calculateAge() {
         let birthDate = new Date(inputBox.value);
-        let d1 = birthDate.getDay();
-        let m1 = birthDate.getMonth();
-        let y1 = birthDate.getFullYear();
+        let birthDay = birthDate.getDay();
+        let birthMonth = birthDate.getMonth() + 1;
+        let birthYear = birthDate.getFullYear();
 
         let today = new Date();
-        let d2 = birthDate.getDate();
-        let m2 = birthDate.getMonth();
-        let y2 = birthDate.getFullYear();
+        let thisDay = today.getDate();
+        let thisMonth = today.getMonth() + 1;
+        let thisYear = today.getFullYear();
+
+        let d3, m3, y3;
+
+        y3 = thisYear - birthYear;
+        console.log("thisYear", thisYear);
+        console.log("birthYear", birthYear);
+
+        if (thisMonth >= birthMonth) {
+          //current month is equal or bigger than birthsday month
+          m3 = thisMonth - birthMonth;
+        } else {
+          y3--;
+          m3 = 12 + thisMonth - birthMonth;
+        }
+
+        if (thisDay >= birthDay) {
+          d3 = thisDay - birthDay;
+        } else {
+          m3--;
+          d3 = getDaysInMonth(birthYear, birthMonth) + thisDay - birthDay;
+        }
+
+        if (m3 < 0) {
+          m3 = 11;
+          y3--;
+        }
+        result.innerHTML = `You are <span>${y3}</span> years, <span>${m3}</span> months, <span>${d3}</span> days old`;
       }
+
+      function getDaysInMonth(year, month) {
+        return new Date(year, month, 0).getDate();
+      }
+
+      
     </script>
   </body>
 </html>
