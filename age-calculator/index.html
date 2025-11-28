@@ -59,8 +59,9 @@
         }
 
         if (m3 < 0) {
+          //if the m3 gets below 0, change the month to 11
           m3 = 11;
-          y3--;
+          y3--; //decreasing the year
         }
         result.innerHTML = `You are <span>${y3}</span> years, <span>${m3}</span> months, <span>${d3}</span> days old`;
       }
@@ -68,8 +69,6 @@
       function getDaysInMonth(year, month) {
         return new Date(year, month, 0).getDate();
       }
-
-      
     </script>
   </body>
 </html>
