@@ -11,11 +11,10 @@
       <h2>Quote of the day</h2>
       <blockquote id="quote">Loading...</blockquote>
       <span id="author">Loading...</span>
-
       <div>
         <button class="newQuote" onclick="getQuote(api_url)">New Quote</button>
-        <button>
-          <img src="/quote-generator/images/image.png" alt="twitter" onclick="shareLink()" />Tweet
+        <button onclick="shareLink()">
+          <img src="/quote-generator/images/image.png" alt="twitter" />Tweet
         </button>
       </div>
     </div>
@@ -27,7 +26,7 @@
 
       const api_url = "https://api.quotable.io/random";
 
-      async function getQuote(url) {
+      async function getQuote(url, e) {
         const response = await fetch(url);
         var data = await response.json();
         quote.innerHTML = data.content;
@@ -37,7 +36,7 @@
 
       function shareLink() {
         window.open(
-          "https://twitter.com/intent/tweet?text=" + quote.innerHTMl + " ---by " + author.innerHTML,
+          "https://twitter.com/intent/tweet?text=" + quote.innerHTML + " ---by " + author.innerHTML,
           "Tweet Window",
           "width=600, height=300"
         );
