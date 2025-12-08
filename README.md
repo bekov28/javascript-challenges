@@ -45,3 +45,8 @@ Features:
 Features: 
 - quotable.io API used for random quotes;
 - sharing quotes to Skype (feature)
+
+8-project. Qr code generator
+Features: 
+- https://goqr.me/api/ API for qr code img source
+- used css animations and @keyframes
