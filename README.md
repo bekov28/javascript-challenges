@@ -59,3 +59,5 @@ Features:
 
 9-project: Toast Notification
 Features:
+- css animations with @keyframes
+- awesome icons from fontawesome.com
