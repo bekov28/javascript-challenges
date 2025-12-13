@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/43f9e41278.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="buttons">
@@ -17,15 +18,18 @@
 
     <script>
       const toastBox = document.getElementById("toastBox");
-      let successMsg = "Successfully submitted!";
-      let errorMsg = "Error occured, please check!";
-      let invalidMsg = "Invalid input, check again!";
+      let successMsg = '<i class="fa-solid fa-circle-check"></i>Successfully submitted!';
+      let errorMsg = '<i class="fa-solid fa-circle-xmark"></i>Error occured, please check!';
+      let invalidMsg = '<i class="fa-solid fa-circle-exclamation"></i>Invalid input, check again!';
 
       function showToast(msg) {
         let toast = document.createElement("div");
         toast.classList.add("toast");
         toast.innerHTML = msg;
         toastBox.appendChild(toast);
+
+        if (msg.includes("Error")) toast.classList.add("error");
+        else if (msg.includes("Invalid")) toast.classList.add("invalid");
       }
     </script>
   </body>
