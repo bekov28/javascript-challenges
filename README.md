@@ -1,7 +1,7 @@
 # javascript-challenges
 
-This is a 30-day challenge for 30-javascript-projects to enhance logic in this programming language
-The ones with the recommended are good for applying to personal projects.
+This is a 30-day challenge for 30-javascript-projects to enhance logic in this programming language.
+The projects with the recommended are recommended for applying to personal projects.
 
 1-project. Weather App (Recommended)
 
@@ -51,7 +51,7 @@ Features:
 - quotable.io API used for random quotes;
 - sharing quotes to Skype (feature)
 
-8-project. Qr code generator
+8-project. QR code generator
 Features:
 
 - https://goqr.me/api/ API for qr code img source
@@ -59,5 +59,9 @@ Features:
 
 9-project: Toast Notification
 Features:
+
 - css animations with @keyframes
 - awesome icons from fontawesome.com
+
+10-project: Music Player:
+Features:
