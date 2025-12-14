@@ -22,7 +22,8 @@
         <h1>Despacito</h1>
         <p>Luis Fonsi Ft. Puerto Rican</p>
 
-        <audio controls id="song">
+        <audio id="song">
+          //removed controls from audio
           <source src="assets/enough.mp3" type="audio/mp3" />
         </audio>
         <input type="range" value="0" id="progress" />
@@ -56,6 +57,19 @@
           ctrlIcon.classList.remove("fa-play");
         }
       }
+
+      if (song.play()) {
+        setInterval(() => {
+          progress.value = song.currentTime;
+        }, 500);
+      }
+
+      progress.onchange = function () {
+        song.play();
+        song.currentTime = progress.value;
+        ctrlIcon.classList.add("fa-pause");
+        ctrlIcon.classList.remove("fa-play");
+      };
     </script>
   </body>
 </html>
