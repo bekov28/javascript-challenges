@@ -18,7 +18,44 @@
             <i class="fa-solid fa-bars"></i>
           </div>
         </nav>
+        <img src="assets/image.png" class="song-img" />
+        <h1>Despacito</h1>
+        <p>Luis Fonsi Ft. Puerto Rican</p>
+
+        <audio controls id="song">
+          <source src="assets/enough.mp3" type="audio/mp3" />
+        </audio>
+        <input type="range" value="0" id="progress" />
+
+        <div class="controls">
+          <div><i class="fa-solid fa-backward"></i></div>
+          <div><i class="fa-solid fa-play" id="ctrlIcon" onclick="playPause()"></i></div>
+          <div><i class="fa-solid fa-forward"></i></div>
+        </div>
       </div>
     </div>
+
+    <script>
+      let progress = document.getElementById("progress");
+      let song = document.getElementById("song");
+      let ctrlIcon = document.getElementById("ctrlIcon");
+
+      song.onloadedmetadata = function () {
+        progress.max = song.duration;
+        progress.value = song.currentTime;
+      };
+
+      function playPause() {
+        if (ctrlIcon.classList.contains("fa-pause")) {
+          song.pause();
+          ctrlIcon.classList.remove("fa-pause");
+          ctrlIcon.classList.add("fa-play");
+        } else {
+          song.play();
+          ctrlIcon.classList.add("fa-pause");
+          ctrlIcon.classList.remove("fa-play");
+        }
+      }
+    </script>
   </body>
 </html>
