@@ -65,3 +65,7 @@ Features:
 
 10-project: Music Player:
 Features:
+
+- used setInterval() and onchange events
+
+11-project: Stopwatch
