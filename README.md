@@ -69,3 +69,6 @@ Features:
 - used setInterval() and onchange events
 
 11-project: Stopwatch
+Features:
+
+- used clearInterval and setInterval
