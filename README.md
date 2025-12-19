@@ -6,13 +6,13 @@ The projects with the recommended are recommended for applying to personal proje
 1-project. Weather App (Recommended)
 
 A simple and beautiful weather application that shows current weather conditions for any city worldwide.
-✨ Features
-🔍 Search Any City - Get weather data for any city worldwide
-🌡️ Temperature Display - Shows temperature in Celsius
-💧 Humidity Information - Displays current humidity levels
-💨 Wind Speed - Shows wind speed in km/h
-🎨 Beautiful UI - Clean and modern interface
-Fast Loading - Quick weather data retrieval (used An API key from OpenWeatherMap)
+✨ Features:
+🔍 - Search Any City - Get weather data for any city worldwide
+🌡️ - Temperature Display - Shows temperature in Celsius
+💧 - Humidity Information - Displays current humidity levels
+💨 - Wind Speed - Shows wind speed in km/h
+🎨 - Beautiful UI - Clean and modern interface
+   - Fast Loading - Quick weather data retrieval (used An API key from OpenWeatherMap)
 
 2-project. To-Do List
 Features:
@@ -72,3 +72,5 @@ Features:
 Features:
 
 - used clearInterval and setInterval
+
+12-project: Calculator
