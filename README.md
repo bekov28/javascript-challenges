@@ -74,7 +74,7 @@ Features:
 
 - used clearInterval and setInterval
 
-12-project: Calculator
+12-project: Calculator (Recommended)
 
 - display.value property of an input element
 - toString(), slice() and eval() methods of JavaScript
