@@ -12,7 +12,8 @@ A simple and beautiful weather application that shows current weather conditions
 💧 - Humidity Information - Displays current humidity levels
 💨 - Wind Speed - Shows wind speed in km/h
 🎨 - Beautiful UI - Clean and modern interface
-   - Fast Loading - Quick weather data retrieval (used An API key from OpenWeatherMap)
+
+- Fast Loading - Quick weather data retrieval (used An API key from OpenWeatherMap)
 
 2-project. To-Do List
 Features:
@@ -74,3 +75,6 @@ Features:
 - used clearInterval and setInterval
 
 12-project: Calculator
+
+- display.value property of an input element
+- toString(), slice() and eval() methods of JavaScript
